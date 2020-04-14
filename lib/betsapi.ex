@@ -1,6 +1,6 @@
-defmodule BetsapiElixir do
+defmodule Betsapi do
   @moduledoc """
-  Documentation for `BetsapiElixir`.
+  Documentation for `Betsapi`.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule BetsapiElixir do
 
   ## Examples
 
-      iex> BetsapiElixir.hello()
+      iex> Betsapi.hello()
       :world
 
   """

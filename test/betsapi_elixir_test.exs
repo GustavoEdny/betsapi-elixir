@@ -1,8 +1,8 @@
 defmodule BetsapiElixirTest do
   use ExUnit.Case
-  doctest BetsapiElixir
+  doctest Betsapi
 
   test "greets the world" do
-    assert BetsapiElixir.hello() == :world
+    assert Betsapi.hello() == :world
   end
 end

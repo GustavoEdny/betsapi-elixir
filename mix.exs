@@ -1,9 +1,9 @@
-defmodule BetsapiElixir.MixProject do
+defmodule Betsapi.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :betsapi_elixir,
+      app: :betsapi,
       version: "0.1.0",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
