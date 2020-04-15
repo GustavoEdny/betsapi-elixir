@@ -33,4 +33,11 @@ defmodule Betsapi.Bet365 do
   def prematch_odds(token, fixture_id, query \\ []) do
     Betsapi.call(token, @prematch_odds, query ++ [FI: fixture_id])
   end
+
+  @result "v1/bet365/result"
+
+  @spec result(binary, integer) :: {:error, any} | {:ok, Tesla.Env.t()}
+  def result(token, event_id) do
+    Betsapi.call(token, @result, [event_id: event_id])
+  end
 end
