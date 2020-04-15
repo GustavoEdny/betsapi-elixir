@@ -23,4 +23,11 @@ defmodule Betsapi.Bet365 do
       _____ when true -> Betsapi.call(token, @inplay_event, [FI: fixture_id])
     end
   end
+
+  @upcoming "v1/bet365/upcoming"
+
+  @spec upcoming(binary, integer, [any]) :: {:error, any} | {:ok, Tesla.Env.t()}
+  def upcoming(token, sport_id, query \\ []) do
+    Betsapi.call(token, @upcoming, query ++ [sport_id: sport_id])
+  end
 end
