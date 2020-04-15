@@ -3,16 +3,14 @@ defmodule Betsapi.Bet365 do
 
   @spec inplay(binary, [any]) :: {:error, any} | {:ok, Tesla.Env.t()}
   def inplay(token, query \\ []) do
-    token
-      |> Betsapi.call(@inplay, query)
+    Betsapi.call(token, @inplay, query)
   end
 
   @inplay_filter "v1/bet365/inplay_filter"
 
   @spec inplay_filter(binary, [any]) :: {:error, any} | {:ok, Tesla.Env.t()}
   def inplay_filter(token, query \\ []) do
-    token
-      |> Betsapi.call(@inplay_filter, query)
+    Betsapi.call(token, @inplay_filter, query)
   end
 
   @inplay_event "v1/bet365/event"
